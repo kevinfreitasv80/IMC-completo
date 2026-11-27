@@ -59,7 +59,7 @@ export function criarServidor() {
 
 // Só inicia porta ao executar este arquivo diretamente, não ao importá-lo em testes.
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
-  const porta = Number(process.env.PORT ?? 3000);
+  const porta = Number(process.env.PORT ?? 6348);
   criarServidor().listen(porta, '0.0.0.0', () => {
     console.log(`IMC Web em http://localhost:${porta}`);
   });
